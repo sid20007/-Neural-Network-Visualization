@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neural Network Visualizer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Neural Network <span class="highlight">Visualizer</span></h1>
+            <p class="subtitle">Watch AI learn in real-time</p>
+        </header>
+
+        <div class="content">
+            <!-- Canvas for network visualization -->
+            <div class="canvas-wrapper">
+                <canvas id="networkCanvas"></canvas>
+            </div>
+
+            <!-- Control Panel -->
+            <div class="control-panel">
+                <div class="panel-section">
+                    <h3>Network Architecture</h3>
+                    <div class="control-group">
+                        <label>Hidden Layers</label>
+                        <input type="range" id="hiddenLayers" min="1" max="3" value="2">
+                        <span id="hiddenLayersValue">2</span>
+                    </div>
+                    <div class="control-group">
+                        <label>Neurons per Layer</label>
+                        <input type="range" id="neuronsPerLayer" min="2" max="8" value="4">
+                        <span id="neuronsPerLayerValue">4</span>
+                    </div>
+                </div>
+
+                <div class="panel-section">
+                    <h3>Training Parameters</h3>
+                    <div class="control-group">
+                        <label>Learning Rate</label>
+                        <input type="range" id="learningRate" min="0.001" max="0.5" step="0.001" value="0.1">
+                        <span id="learningRateValue">0.1</span>
+                    </div>
+                    <div class="control-group">
+                        <label>Epochs</label>
+                        <input type="range" id="epochs" min="10" max="500" step="10" value="100">
+                        <span id="epochsValue">100</span>
+                    </div>
+                </div>
+
+                <div class="panel-section">
+                    <h3>Dataset</h3>
+                    <div class="dataset-selector">
+                        <button class="dataset-btn active" data-dataset="xor">XOR</button>
+                        <button class="dataset-btn" data-dataset="circle">Circle</button>
+                        <button class="dataset-btn" data-dataset="spiral">Spiral</button>
+                    </div>
+                </div>
+
+                <div class="panel-section">
+                    <div class="stats">
+                        <div class="stat-item">
+                            <span class="stat-label">Epoch</span>
+                            <span class="stat-value" id="currentEpoch">0</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Loss</span>
+                            <span class="stat-value" id="currentLoss">0.000</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Accuracy</span>
+                            <span class="stat-value" id="accuracy">0%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel-section">
+                    <button id="trainBtn" class="btn btn-primary">Start Training</button>
+                    <button id="resetBtn" class="btn btn-secondary">Reset Network</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
