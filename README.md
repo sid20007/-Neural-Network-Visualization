@@ -130,8 +130,7 @@ Inspired by:
 
 ## 🔗 Links
 
-- [Live Demo](#) *(Add your demo link here)*
-- [Learn More About Neural Networks](https://en.wikipedia.org/wiki/Artificial_neural_network)
+- [Learn More About Neural Netrks](https://en.wikipedia.org/wiki/Artificial_neural_network)
 - [Deep Learning Resources](https://www.deeplearning.ai/)
 
 ---
