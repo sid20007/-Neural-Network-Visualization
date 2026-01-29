@@ -129,7 +129,7 @@ Inspired by:
 - Modern deep learning architectures
 
 ## 🔗 Links
-
+https://sid20007.github.io/-Neural-Network-Visualization/
 - [Learn More About Neural Netrks](https://en.wikipedia.org/wiki/Artificial_neural_network)
 - [Deep Learning Resources](https://www.deeplearning.ai/)
 
